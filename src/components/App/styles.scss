@@ -1,0 +1,44 @@
+@use './../../styles/vars';
+
+body {
+  background-color: grey;
+}
+
+.app {
+  background-color: white;
+  width: 80%;
+  margin: 0 auto;
+  padding: 2rem;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+  h1 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+}
+
+.exercice {
+  width: 100%;
+  padding: 1rem;
+  border-bottom: 3px solid grey;
+
+  h2,
+  p {
+    margin-bottom: 1rem;
+  }
+}
+
+.form {
+  input,
+  button {
+    padding: 0.5rem 1rem;
+    width: 50%;
+  }
+
+  input,
+  input::placeholder,
+  button {
+    font-size: 1rem;
+  }
+}
