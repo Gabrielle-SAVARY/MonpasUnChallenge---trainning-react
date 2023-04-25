@@ -10,10 +10,17 @@ import { CardActionArea } from '@mui/material';
 // API pokemon : https://pokebuildapi.fr/api/v1
 // API limité à 10 pokemon: api/v1/pokemon/limit/10
 
+interface ApiTypesProps {
+  name: string
+  image: string
+}
+
 interface CardProps {
   pokemon: {
+    /*     id: number */
     name: string
     image: string
+    apiTypes: ApiTypesProps[]
   }
 }
 
@@ -37,6 +44,16 @@ function CardPoke({ pokemon }: CardProps) {
             {' '}
             {pokemon.name}
           </Typography>
+
+          <Typography className="pokeTypes">
+            {pokemon.apiTypes.map((type) => (
+              <span key={type.image} className="pokeType">
+                <span>{type.name}</span>
+                <img src={type.image} alt={type.name} className="imgType" />
+              </span>
+            ))}
+          </Typography>
+
         </CardContent>
       </CardActionArea>
     </Card>

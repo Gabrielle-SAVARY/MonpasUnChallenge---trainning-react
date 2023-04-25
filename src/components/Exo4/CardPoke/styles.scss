@@ -12,3 +12,18 @@
   flex-wrap: wrap;
   gap: 1rem;
 }
+
+.imgType {
+  height: 25px;
+  width: 25px;
+}
+
+.pokeTypes {
+  display: flex;
+  justify-content: space-between
+
+}
+.pokeType {
+  display: flex;
+  align-items: center;
+}
